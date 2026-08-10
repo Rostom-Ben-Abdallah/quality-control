@@ -10,22 +10,25 @@ A portfolio repository for applied **real-time computer vision in industrial env
 
 Real-time instance segmentation and tracking with bottle/cap association, OK/NG classification, cap-colour checking, one-time line-crossing counts, cadence and yield monitoring.
 
-▶ **[Project page + public code](projects/bottle-cap-inspection/README.md)**  
-▶ **[Short demo video](assets/demos/bottle_cap_inspection.mp4)**
+**[Project page + public code](projects/bottle-cap-inspection/README.md)**
+
+https://github.com/user-attachments/assets/8f01de0a-532a-40ac-932f-2ff271ecea43
 
 ### 2. Laser-Marking Quality Control
 
 Industrial inspection combining OCR, geometric position checking, colour comparison, visual validation and production-oriented PASS/FAIL decision logic.
 
-▶ **[Project page + public colour/position code](projects/laser-marking-quality-control/README.md)**  
-▶ **[Short demo video](assets/demos/laser_marking_quality_control.mp4)**
+**[Project page + public colour/position code](projects/laser-marking-quality-control/README.md)**
+
+https://github.com/user-attachments/assets/8aa7c5ec-2791-41a1-9837-2bae320c3ea0
 
 ### 3. Medication Package Segmentation & Counting
 
 YOLOv11-seg + ByteTrack pipeline for automated medication dispensing, with ROI/hysteresis logic and track-ID filtering to reduce double counts.
 
-▶ **[Project page](projects/medication-counting/README.md)**  
-▶ **[Short demo video](assets/demos/medication_segmentation_counting.mp4)**
+**[Project page](projects/medication-counting/README.md)**
+
+https://github.com/user-attachments/assets/c11e8a28-19eb-49b8-8467-d3547293a64f
 
 The medication project is documented and demonstrated publicly, while its original deployment source and production assets remain private.
 
