@@ -6,9 +6,9 @@ This project corresponds to my SAC Marquage internship work on automated medicat
 
 ## Demo
 
-▶ **[Watch the short repository demo](../../assets/demos/medication_segmentation_counting.mp4)**
+https://github.com/user-attachments/assets/c11e8a28-19eb-49b8-8467-d3547293a64f
 
-The demo shows segmentation masks and a running total while medication packages pass through the counting area.
+The video is embedded using GitHub's native attachment player, so it can be played directly in the README without downloading it first.
 
 ## Project pipeline
 
