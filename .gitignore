@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Local environment / secrets
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+
+# Models and exports
+*.pt
+*.pth
+*.onnx
+*.engine
+
+# Generated media / datasets
+outputs/
+runs/
+*.mp4
+*.avi
+*.mov
+*.xlsx
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
