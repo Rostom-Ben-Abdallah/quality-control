@@ -6,9 +6,9 @@ The demonstrated pipeline identifies bottles as they move through the camera vie
 
 ## Demo
 
-▶ **[Watch the short repository demo](../../assets/demos/bottle_cap_inspection.mp4)**
+https://github.com/user-attachments/assets/8f01de0a-532a-40ac-932f-2ff271ecea43
 
-The original uploaded demonstration is longer and higher resolution; the repository clip is intentionally compressed for fast GitHub viewing.
+The video is embedded using GitHub's native attachment player, so it can be played directly in the README without downloading it first.
 
 ## Pipeline
 
