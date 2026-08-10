@@ -1,0 +1,15 @@
+{
+  "expected_rgb": [235, 235, 235],
+  "delta_e_max": 12.0,
+  "position_tolerance_px": 18,
+  "ocr_min_confidence": 0.25,
+  "labels": {
+    "Anmelden": [184, 142, 443, 209],
+    "Telefon 1": [493, 145, 721, 209],
+    "Telefon 2": [757, 137, 995, 203],
+    "Neustart": [1034, 130, 1273, 198],
+    "Power": [1454, 126, 1626, 182],
+    "Fiber": [1729, 121, 1871, 181],
+    "Reset": [1278, 396, 1432, 450]
+  }
+}
