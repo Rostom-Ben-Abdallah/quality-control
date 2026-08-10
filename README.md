@@ -1,79 +1,77 @@
-# Real-Time Industrial Vision Quality Control
+# Industrial Computer Vision — Quality Control, Segmentation & Counting
 
-A computer-vision quality-control prototype for inspecting laser-marked industrial parts in real time. The project combines deep-learning detection with deterministic OpenCV checks so that visual defects can be detected before a part continues through production.
+A portfolio repository for applied **real-time computer vision in industrial environments**. It groups three representative systems I worked on: laser-marking quality inspection, bottle/cap segmentation and quality checking, and segmentation-based medication counting.
 
-> **Portfolio note:** this repository is a public, non-confidential representation of the engineering work. Proprietary production data, customer assets, trained production weights, PLC configuration, and internal deployment details are intentionally not published.
+> **Portfolio / confidentiality note:** public code is limited to material that can be shared safely. Customer production data, private datasets, trained production weights, PLC configuration, credentials, and confidential deployment assets are not included.
 
-## What the system demonstrates
+## Featured projects
 
-- Real-time image acquisition and visual inspection
-- YOLO-based object/region detection
-- Position and geometry validation with OpenCV
-- Color-difference checking using DeltaE-style measurements
-- Opacity / visual-quality checks
-- OCR-oriented readability validation
-- GPU-oriented inference workflow
-- Integration mindset for industrial decision logic and line control
+### 1. Bottle Segmentation, Counting & Cap Quality Inspection
 
-## Engineering context
+Real-time instance segmentation and tracking with bottle/cap association, OK/NG classification, cap-colour checking, one-time line-crossing counts, cadence and yield monitoring.
 
-The original project was developed as an end-of-year industrial computer engineering project. The complete system connected an industrial camera and AI/vision pipeline to production decision logic, including safe stop / acknowledgement / restart behavior through industrial communication.
+▶ **[Project page + public code](projects/bottle-cap-inspection/README.md)**  
+▶ **[Short demo video](assets/demos/bottle_cap_inspection.mp4)**
 
-The main challenge was not simply detecting an object: it was producing a repeatable **PASS / FAIL decision under real production constraints**, including varying appearance, timing requirements, and multiple quality criteria.
+### 2. Laser-Marking Quality Control
 
-## High-level pipeline
+Industrial inspection combining OCR, geometric position checking, colour comparison, visual validation and production-oriented PASS/FAIL decision logic.
+
+▶ **[Project page + public colour/position code](projects/laser-marking-quality-control/README.md)**  
+▶ **[Short demo video](assets/demos/laser_marking_quality_control.mp4)**
+
+### 3. Medication Package Segmentation & Counting
+
+YOLOv11-seg + ByteTrack pipeline for automated medication dispensing, with ROI/hysteresis logic and track-ID filtering to reduce double counts.
+
+▶ **[Project page](projects/medication-counting/README.md)**  
+▶ **[Short demo video](assets/demos/medication_segmentation_counting.mp4)**
+
+The medication project is documented and demonstrated publicly, while its original deployment source and production assets remain private.
+
+## Industrial vision workflow
 
 ```text
-Industrial camera
+Camera / video
       |
       v
-Frame acquisition
+Detection / instance segmentation
+      |
+      +----> tracking / persistent IDs
+      +----> OCR / readability
+      +----> position / geometry
+      +----> colour / appearance
       |
       v
-YOLO detection / ROI localization
+Temporal + ROI logic
       |
-      +-------------------+
-      |                   |
-      v                   v
-Geometry / position     Visual checks
-OpenCV                  color / opacity / OCR
-      |                   |
-      +---------+---------+
-                |
-                v
-          Quality decision
-          PASS / FAIL
-                |
-                v
-       Industrial control layer
+      v
+Count / PASS / FAIL / alert
+      |
+      v
+Operator UI / logs / production control
 ```
+
+## Public code highlights
+
+- [`projects/bottle-cap-inspection/bottle_cap_inspection.py`](projects/bottle-cap-inspection/bottle_cap_inspection.py) — segmentation, tracking, bottle/cap association, cap-quality checking and one-time counting.
+- [`projects/laser-marking-quality-control/color_position_inspection.py`](projects/laser-marking-quality-control/color_position_inspection.py) — OCR, expected-position checks, CIEDE2000 colour comparison and structured PASS/FAIL reporting.
+- Legacy prototype scripts are retained at the repository root as engineering history; the project folders above are the recommended portfolio entry points.
 
 ## Technologies
 
-`Python` · `OpenCV` · `YOLO` · `PyTorch` · `EasyOCR` · `CUDA/cuDNN` · `Computer Vision` · `Industrial Automation`
+**Vision / AI:** Python · OpenCV · PyTorch · Ultralytics YOLO · YOLOv11-seg · EasyOCR · instance segmentation  
+**Tracking:** ByteTrack · BoT-SORT · ROI / hysteresis / ID filtering  
+**Quality:** CIEDE2000 · position validation · OCR · appearance checks  
+**Deployment:** CUDA/cuDNN · PyQt · Excel logging · Modbus TCP / PLC integration
 
-## Why this project matters
+## Engineering focus
 
-This project reflects the part of computer vision that interests me most: taking a model beyond an offline notebook and integrating it into a complete real-time system where reliability, latency, repeatability, and failure handling matter.
-
-## Repository structure
-
-The repository contains prototype Python scripts, requirements, and example data/assets used for experimentation. Some files reflect iterative development rather than a packaged production release.
-
-## Related research interests
-
-I am currently interested in graduate research involving:
-
-- object detection and segmentation
-- multi-object tracking and re-identification
-- video understanding and action recognition
-- robust visual perception under real-world conditions
-- intelligent robotics and industrial vision
-- computer vision for animal and human behavior analysis
+The important challenge in these projects is not simply achieving a detection. The systems must produce repeatable decisions in continuous video while handling motion, overlap, track changes, timing constraints and real production workflow requirements.
 
 ## Author
 
 **Rostom Ben Abdallah**  
 Industrial Computer Engineering · Computer Vision / Visual AI  
-Mitacs Research Intern, Université de Moncton  
-[LinkedIn](https://www.linkedin.com/in/rostom-ben-abdallah-77bb441a1/) · [GitHub](https://github.com/Rostom-Ben-Abdallah)
+Mitacs Research Intern — Université de Moncton  
+[GitHub Profile](https://github.com/Rostom-Ben-Abdallah) · [LinkedIn](https://www.linkedin.com/in/rostom-ben-abdallah-77bb441a1/)
