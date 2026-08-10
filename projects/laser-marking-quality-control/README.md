@@ -6,9 +6,9 @@ This is the project described on my CV as a real-time laser-marking quality-cont
 
 ## Demo
 
-▶ **[Watch the short repository demo](../../assets/demos/laser_marking_quality_control.mp4)**
+https://github.com/user-attachments/assets/8aa7c5ec-2791-41a1-9837-2bae320c3ea0
 
-The clip shows the inspection setup and visual validation interface in operation. The repository video is intentionally compressed for quick viewing.
+The video is embedded using GitHub's native attachment player, so it can be played directly in the README without downloading it first.
 
 ## Public code
 
